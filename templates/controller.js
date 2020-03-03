@@ -29,5 +29,5 @@ module.exports = {
   findAll,
   create,
   update,
-  remove,
+  remove
 }
