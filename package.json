@@ -1,0 +1,8 @@
+{
+    "scripts":{
+        "todos":"node ./tools/generateTodos.js",
+        "model":"node ./tools/generateModel.js",
+        "controller":"node ./tools/generateController.js",
+        "route":"node ./tools/generateRoute.js"
+      }
+}
