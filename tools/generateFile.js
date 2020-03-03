@@ -14,6 +14,29 @@ class setFile {
         }
     }
 
+    getLines(content) {
+        try {
+            const lines = content.split(/\r?\n/);
+            const lineRequire = 0;
+            const lineRoute = lines.length - 2;
+            return {
+                lineRequire,
+                lineRoute
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
+    appeded(line, content, search) {
+        if (content.indexOf(search) < 0 ) {
+            content = content.split('\n');
+            content.splice(line + 1,0,search);
+            content = content.filter((str) => str);
+            return content.join('\n');
+        }
+    }
+
     writeFile(content) {
         const encoding = "utf8";
         fs.writeFileSync(this.fileNamePath, content, encoding, (err)=> { 
